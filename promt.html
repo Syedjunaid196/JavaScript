@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input from user</title>
+</head>
+<body>
+    <script>
+        var n1 = prompt("please enter first value");
+        var n2 = prompt("please enter second value");
+        var n3 = parseInt(n1);
+        var n4 = parseInt(n2);
+        var n5 = n3+n4;
+        console.log(n5);
+
+        var s1 = "10k";
+        var s2 = "20k"
+        var s3 = s1 + s2;
+        console.log(s3);
+        // output -- 10k20k--- which is known as concetination
+
+        var s1 = "10k";
+        var s2 = 20;
+        var s3 = s1 + s2;
+        console.log(s3);
+        // output -- 10k20-- in which first conversion and then concetination is done
+
+        var s1 = "100";
+        var s2 = 1000;
+        var s3 = s2 - s1;
+        console.log(s3);
+        // output -- 900 -- in which first conversion is done ie string is converted into number and then numbers are added 
+
+
+        var s1 = "10k";
+        var s2 = "20k"
+        var s3 = s1 - s2;
+        console.log(s3);
+        // output nan -- which is not a number
+
+
+
+        var s1 = "200k"
+        var s2 = 200;
+        var s3 = s1 - s2;
+        console.log(s3);
+        // output is NaN bcz the string is not convertable
+
+        // TO PRINT FLOAT
+        var s1 = 99.9;
+        var s2 = 88;
+        var s3 = parseFloat(s1);
+        var s4 = s2 +s3;
+        console.log(s4);
+
+
+    </script>
+</body>
+</html>
