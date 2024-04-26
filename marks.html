@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let rollNo = prompt("enter your roll number");
+        let isRollNo = isNaN(rollNo);
+        if (isRollNo) {
+            console.log("provide numbers only")
+        }
+        else {
+            let name = prompt("enter your name");
+            let isName = isNaN(name);
+            if (isName) {
+                let marks = prompt("enter marks please")
+                let isMarks = isNaN(marks)
+                if (isMarks) {
+                    console.log("marks should be in numbers");
+                }
+                else{
+
+                    str = `roll number ${rollNo} with  name ${name} has scored ${marks} marks`
+                    console.log(str);
+                }
+            }
+            else {
+                console.log(" name should not be number")
+            }
+        }
+
+        // str2 = `${name } with ${rollNo} has scored ${marks}`
+    </script>
+</body>
+
+</html>
