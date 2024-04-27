@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function input1() {
+
+            let num1 = prompt("enter ist number");
+            let isNum1 = isNaN(num1)
+
+            if (isNum1) {
+                console.log("not a  number")
+            }
+            else {
+                return num1;
+            }
+        }
+        function input2() {
+            let num2 = prompt("enter 2nd number");
+            let isNum2 = isNaN(num2)
+
+            if (isNum2) {
+                console.log("not a  number")
+            }
+            else {
+                 return num2;
+            }
+
+        }
+        function add(num1=0, num2=0) {
+            let x = parseInt(num1);
+            let y = parseInt(num2);
+            let sum = x + y;
+            return ` the sum of ${num1} and ${num2} is ${sum}`
+        }
+        function sub(num1=0, num2=0) {
+            let sub = num1 - num2;
+            return ` the sub of ${num1} and ${num2} is ${sub}`
+        }
+        function mul(num1=0, num2=0) {
+            let mul = num1 * num2;
+            return ` the multiplication of ${num1} and ${num2} is ${mul}`
+        }
+        function div(num1=0, num2=0) {
+            let div = num1 / num2;
+            return ` the division of ${num1} and ${num2} is ${div}`
+        }
+        function mod(num1=0, num2=0) {
+            let mod = num1 % num2;
+            return ` the modolus of ${num1} and ${num2} is ${mod}`
+        }
+
+        let num1;
+        let num2;
+
+        let a = input1(num1);
+        let b = input2(num2);
+
+        let addition = add(a, b);
+        console.log(addition);
+
+        let subtraction = sub(a, b);
+        console.log(subtraction);
+
+        let division = div(a, b);
+        console.log(division);
+
+        let multiplication = mul(a, b);
+        console.log(multiplication);
+
+        let modolus = mod(a, b);
+        console.log(modolus);
+
+
+    </script>
+</body>
+
+</html>
