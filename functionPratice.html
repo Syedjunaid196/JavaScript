@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function input1(){
+            let num1 = prompt("enter first number")
+            let isNum1 =isNaN(num1)
+        if(isNum1){
+            console.log("not a number 1");
+        }
+        else {
+            return num1;
+        }
+    }
+        function input2(){
+            let num2= prompt("enter second number");
+            let isNum2 = isNaN(num2);
+            if(isNum2){
+                console.log("this is not a number");
+            }
+            else{
+                return num2;
+            }
+        }
+
+        function add(num1=0, num2=0){
+            let x = parseInt(num1)
+            let y = parseInt(num2)
+            let sum = x+y
+            return `the sum of ${num1} and ${num2} is ${sum}`
+
+        }
+
+
+        let num1;
+        let num2;
+        let a = input1(num1)
+        let b = input2(num2)
+
+        let result = add(a,b);
+        console.log(result)
+        
+ </script>
+</body>
+
+</html>
