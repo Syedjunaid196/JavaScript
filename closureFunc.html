@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // closure means --- funnction k ander function like nested if 
+
+        function add() {
+            let x=19;
+            let y=66;
+            let z = x+y;
+            console.log(`the sum in the main function is ${z}`)
+            function sub(){
+                let sub = x-y;
+                console.log(`the subtraction in second function is ${sub}`)
+                
+
+            }
+            sub()
+        }
+        add()
+
+
+
+    </script>
+</body>
+
+</html>

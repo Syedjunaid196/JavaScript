@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // arrow likhne ka tareeqa => which is also called fat arrow function
+        // steps to make an arrow function
+        // step 1-- naming of function is not allowed 
+        // step-2--also function keyword is not allowed
+        // additional points ----- in case we have to exicuite only one line of code in the function or in any type of blocks like in loops curley braces are optional and in the same case return is written by default we dont have to write return 
+
+        let sq = () => {
+            let x = Number(prompt("enter any number"));
+            let res = x*x;
+            return res;
+
+        }
+       let result= sq()
+       console.log(result)
+
+
+       let sub = (x) => x-10;
+       let subtract= sub(100)
+       console.log(subtract)
+    </script>
+</body>
+</html>
