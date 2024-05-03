@@ -11,20 +11,33 @@
     <script>
         // closure means --- funnction k ander function like nested if 
 
-        function add() {
-            let x=19;
-            let y=66;
-            let z = x+y;
-            console.log(`the sum in the main function is ${z}`)
-            function sub(){
-                let sub = x-y;
-                console.log(`the subtraction in second function is ${sub}`)
-                
+        // function add() {
+        //     let x=19;
+        //     let y=66;
+        //     let z = x+y;
+        //     console.log(`the sum in the main function is ${z}`)
+        //     function sub(){
+        //         let sub = x-y;
+        //         console.log(`the subtraction in second function is ${sub}`)
 
+
+        //     }
+        //     sub()
+        // }
+        // add()
+        let addition = function (x = 0, y = 0) {
+            let sum = x + y;
+            console.log(`the sum of the ${x} and ${y} in the main function is ${sum}`)
+
+            function subtraction() {
+                let sub = x - y;
+                console.log(`the subtraction of ${x} and ${y} in the inner function is ${sub}`);
             }
-            sub()
+            subtraction()
         }
-        add()
+        addition(239, 107)
+
+
 
 
 
