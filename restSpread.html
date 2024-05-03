@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add(name, email, gender, ...salary) {
+            let sum = 0;
+            for (let i = 0; i < salary.length; i++) {
+                sum += salary[i]
+            }
+            return `Name ${name} with email id-${email}, gender-${gender} has total salary of ${sum}`
+        }
+        let sal = [100, 2000, 300, 50000, 4500, 55525];
+        let res = add(`junaid`, `juinaid88@gmail.com`, `male`, ...sal);
+        console.log(res);
+
+
+
+        //Rest operator
+
+        const addition = function add(name, ...args) {
+            let sum = 0;
+            for (i = 0; i < args.length; i++) {
+                sum += args[i];
+            }
+            return (`Name ${name} has a basic salary of ${sum}`);
+        }
+
+        let result = addition(`hyder`, 888, 328, 778, 88783,);
+        console.log(result)
+
+
+        //spread operator
+
+        const income = function add(name, email, phoneNumber, address, accountNumber, id, ...income) {
+            let sum = 0;
+
+            for (let i = 0; i < income.length; i++) {
+                sum += income[i]
+            }
+            return `Account Holder With Name-${name} email-Address-${email} phone number${phoneNumber} address-${address} account number-${accountNumber} id-${id} has a total salary of ${sum}`
+        }
+
+
+        let inc = [65747, 8776553, 876598, 98799, 6781];
+        let totalIncome = income(`junaid`, `syed.junaid1019@gmail.com`, `7051556196`, `kupwara`, `1234567`, `998`, ...inc);
+        console.log(totalIncome)
+
+
+    </script>
+</body>
+
+</html>
