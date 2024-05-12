@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function createEmployee(name, age, email, gender,id) {
+            let emp1 = {
+                name,
+                age,
+                email,
+                gender,
+                'i~d': id
+            };
+            return emp1;
+        }
+        let empl = createEmployee('Junaid', 77, 'juni@gmail.com', 'male', 501)
+        emp1.annualSalary = "300000"
+        console.log(`name : ${emp1.name}`)
+        console.log(`age : ${emp1.age}`)
+        console.log(`Email-Id : ${emp1.email}`)
+        console.log(`Gender : ${emp1.gender}`)
+        console.log(`salary : ${emp1.annualSalary}`)
+        console.log(`id : ${emp1['i~d']}`);
+    </script>
+</body>
+
+</html>

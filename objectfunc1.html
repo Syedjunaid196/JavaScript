@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let id = 999;
+        let name = "junaid";
+        let email = "junaid@gmail.com"
+        let gender = "male";
+        let salary= 39999;
+        function createEmployee(){
+            let emp = {
+                id : id,
+                name : name,
+                email : email,
+                gender : gender,
+                salary : salary,
+                "permeanant-address" : 'kupwara'
+            };
+            return emp
+        }
+        let emp1 = createEmployee()
+        console.log(`id : ${emp1.id}`);
+        console.log(`name : ${emp1.name}`);
+        console.log(`email : ${emp1.email}`);
+        console.log(`Gender : ${emp1.gender}`);
+        console.log(`Salary : ${emp1.salary}`);
+        console.log(`permeanant-address : ${emp1['permeanant-address']}`);
+    </script>
+</body>
+</html>
