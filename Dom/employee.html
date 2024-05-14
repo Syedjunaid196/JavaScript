@@ -1,13 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            border: 4px solid rgb(114, 61, 192);
+            width: 400px;
+            /* height: 500px; */
+            margin: auto;
+            padding: 50px;
+            margin-top: 15px;
+            border-radius: 50px;
+            justify-content: end;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+
+        label {
+            font-size: x-large;
+        }
+
+        input {
+            margin-left: 5px;
+            border: 3px solid black;
+            border-radius: 15px;
+            height: 25px;
+            text-indent: 36px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>employee</h1>
-    
+    <div class="container">
+        <!-- <form action=""> -->
+        <h1>Total Salary</h1>
+        <div>
+            <label for="empid">Employee-Id</label>
+            <input type="number" name="">
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="">
+        </div>
+        <div>
+            <label for="address">Address</label>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="">
+        </div>
+        <div>
+            <label for="etf">Etf</label>
+            <input type="number" name="" id="etf">
+
+        </div>
+        <div>
+            <label for="homeAllowance">Home Allowance</label>
+            <input type="number" name="" id="homeAllowance">
+        </div>
+        <div>
+            <label for="foodCoupons">food Coupons</label>
+            <input type="number" name="" id="foodCoupons">
+        </div>
+        <div>
+            <label for="medicalInsurance">Medical Insurance</label>
+            <input type="number" name="" id="medicalInsurance">
+        </div>
+
+        <div>
+            <label for="travelExpenses">Travel Expenses</label>
+            <input type="number" name="" id="travelExpenses">
+        </div>
+
+        <button onclick="addition()">Total Salary</button>
+
+        <h2 id="totalSalary">Total Salary Is</h2>
+
+
+        <!-- </form> -->
+    </div>
+    <script>
+        function addition() {
+            let etf1 = document.getElementById('etf')
+            let etfValue = etf1.value
+            console.log(etfValue)
+
+
+            let homeAllowance1 = document.getElementById('homeAllowance');
+            let homeAllowanceValue = homeAllowance1.value;
+            console.log(homeAllowanceValue)
+
+
+            let foodCoupons1 = document.getElementById('foodCoupons');
+            let foodCouponsValue = foodCoupons1.value;
+            console.log(foodCouponsValue);
+
+            let medicalInsurance1 = window.document.getElementById('medicalInsurance');
+            let medicalInsuranceValue = medicalInsurance1.value;
+            console.log(medicalInsuranceValue);
+
+
+            let travelExpenses1 = window.document.getElementById('travelExpenses');
+            let travelExpensesValue = travelExpenses1.value;
+            console.log(travelExpensesValue);
+
+            let addition = Number(etfValue) + Number(homeAllowanceValue) + Number(foodCouponsValue) + Number(medicalInsuranceValue) + Number(travelExpensesValue);
+            console.log(addition);
+
+            let totalSalary1 = window.document.getElementById('totalSalary');
+            innerText1 = totalSalary1.innerText;
+            console.log(innerText1)
+
+            totalSalary1.innerText = `Total Salary Is ${addition}`;
+
+
+
+        }
+    </script>
 </body>
+
 </html>
