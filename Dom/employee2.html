@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 3px solid black;
+            width: 400px;
+            margin: auto;
+            border-radius: 50px;
+            padding: 50px;
+            justify-content: end;
+        }
+        form{
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Employee Details</h1>
+        <form action="" method>
+            <div>
+
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address">
+            </div>
+            <div>
+                <label for="gender">Gender</label>
+                <input type="radio" name="gender" id="male"><label for="male">male</label>
+                <input type="radio" name="gender" id="female"> <label for="female">female</label>
+            </div>
+
+            <div>
+                <label for="additionalitems">Additional Items</label>
+                <input type="checkbox" name="cars" id="cars"><label for="cars">Cars</label>
+                <input type="checkbox" name="buses" id="buses"><label for="buses">Buses</label>
+                <input type="checkbox" name="bikes" id="bikes"><label for="bikes">Bikes</label>
+
+            </div>
+            <div>
+                <label for="salary">Salary</label>
+                <input type="number" name="salary" id="salary">
+            </div>
+            <div>
+                <label for="rent">Rental Income</label>
+                <input type="number" name="Rental" id="rentalIncome">
+            </div>
+
+            <div>
+                <label for="otherIncome">Other Income</label>
+                <input type="number" name="otherIncome" id="otherIncome">
+            </div>
+            <div>
+                <label for="totalIncome">Total Income</label>
+                <input type="number" name="" id="totalIncome" disabled>
+            </div>
+            <div>
+                <button type="submit">please click me</button>
+            </div>
+        </form>
+
+    </div>
+    <script src="employee.js"></script>
+</body>
+
+</html>

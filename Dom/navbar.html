@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div class="navbar">
+    
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Rewards</a></li>
+            <li><a href="#">Referrals</a></li>
+            <li><a href="#">login</a></li>
+            <li><a href="#">Sign-up</a></li>
+            <li><a href="#">Careers</a></li>
+        </ul>
+    </div>
+  
+
+    <script>
+       let nav = document.querySelectorAll('.navbar ul');
+       console.log(nav);
+       for (let index = 0; index < nav.length; index++) {
+        nav[index].style.display='flex';
+        nav[index].style.justifyContent='space-around'
+        nav[index].style.height='50px'
+        nav[index].style.margin='30px'
+        nav[index].style.fontSize='40px'
+        nav[index].style.alignItems='center'
+        nav[index].style.backgroundColor='black'
+        
+        nav[index].style.borderRadius='25px'
+        nav[index].style.color='white'
+        
+        
+    }
+    let body = document.querySelector("body")
+    body.style.backgroundColor='whiteSmoke'
+    // body.style.fontStyle='italic'
+    
+    
+    let anchor = document.querySelectorAll('ul')
+    console.log(anchor);
+    anchor.style.textDecoration='none'
+    
+    </script>
+</body>
+
+</html>
