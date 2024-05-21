@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <style>
+        body{
+            background-color: rgb(118, 96, 100);
+        }
+        .container{
+            border: 9px dashed rgb(68, 68, 68);
+            width: 500px;
+            height: 400px;
+            margin: 30px auto;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            background-color: rgba(125, 121, 121, 0.397);
+            text-transform: capitalize;
+        }
+        div {
+            margin: 40px;
+        }
+        div button{
+            height: 50px;
+            width: 150px;
+            border: 5px dashed rgb(67, 67, 67);
+            border-radius: 10px;
+            text-transform: capitalize;            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>this is an about page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, autem?</p>
+        <hr>
+        <div>
+            <button onclick="careers()">go to careers page</button>
+        </div>
+
+        <div>
+            <button onclick="home()">go to home page</button>
+        </div>
+
+        <div>
+            <button onclick="contact()">go to contact page</button>
+        </div>
+    
+    </div>
+
+    <script>
+        function careers(){
+            location.href="careers.html"
+        }
+        function home()
+        {
+            location.href="home.html"
+        }
+        function contact()
+        {
+            location.href="contact.html"
+        }
+       
+
+       
+       
+    </script>
+</body>
+
+</html>

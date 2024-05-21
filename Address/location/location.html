@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <style>
+        .container {
+            margin: 30px auto;
+            border: 3px solid black;
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            /* text-align: center; */
+
+
+        }
+
+        div {
+            margin: 10px 65px;
+
+        }
+
+        button {
+            text-transform: capitalize;
+            width: 150px;
+            height: 50px;
+            background-color: black;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <button onclick="site1()">go to google</button>
+        </div>
+
+        <div>
+            <button onclick="site2()">go to x</button>
+        </div>
+
+        <div>
+            <button onclick="site3()">go to facebook</button>
+        </div>
+
+
+
+
+    </div>
+
+    <script>
+        function site1() {
+            location.href = "https://google.com"
+        }
+        function site2() {
+            location.href = "https://x.com"
+        }
+
+
+        
+        function site3() {
+            location.href = "https://fb.com"
+        }
+
+        
+    </script>
+</body>
+
+</html>
