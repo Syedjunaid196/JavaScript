@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Details</title>
+</head>
+<body>
+    <img src="" id="image" alt="">
+    
+    <script>
+        console.log(location);
+        let params = new URLSearchParams(location.search);
+        let id = params.get("id");
+        let name = params.get('name');
+        let quantity = params.get('quantity');
+        let price = params.get('price');
+        let image = params.get('image');
+
+        let img = document.querySelector("#image");
+        img.src = 'assets/images/${image}'
+    </script>
+</body>
+</html>

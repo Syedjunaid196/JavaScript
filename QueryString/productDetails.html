@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        h1{
+            margin-left: 750px;
+            color: silver;
+        }
+        table {
+            border: 3px solid black;
+            width: 800px;
+            height: 500px;
+            text-align: center;
+            padding: 20px;
+            text-transform: capitalize;
+            margin: auto;
+            background-color:silver;
+        }
+        table th,td,a {
+            border: 2px solid black;
+            padding: 8px; 
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            background-color: rgb(164, 101, 144);
+        }
+        table td img{
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product Details </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>image</th>
+
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>pc</td>
+                <td>3</td>
+                <td>7000</td>
+                <td><img src="/assets/images/pc.jpg" alt="pc"></td>
+                <td><a href="Getdetails.html?id=101&name=pc&quantity=3&price=7000&image=pc.jpg">Details</a></td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>keyboard</td>
+                <td>30</td>
+                <td>10000</td>
+                <td><img src="/assets/images/gaming-keyboard-with-87-keys-rgb-backlit-with-suspension-keys-original-imagzcgwtrabgjna.webp"
+                        alt=""></td>
+                <td><a href="#">Details</a></td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Mouse</td>
+                <td>10</td>
+                <td>5000</td>
+                <td><img src="/assets/images/mouse.jpg" alt=""></td>
+                <td><a href="#">Details</a></td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>fan</td>
+                <td>5</td>
+                <td>6000</td>
+                <td><img src="/assets/images/fan.png" alt=""></td>
+                <td><a href="#">Details</a></td>
+            </tr>
+            <tr>
+                <td>105</td>
+                <td>ac</td>
+                <td>1</td>
+                <td>15000</td>
+                <td><img src="/assets/images/Air-Conditioner-Buying-Guide.jpg" alt=""></td>
+                <td><a href="#">Details</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
