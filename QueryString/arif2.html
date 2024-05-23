@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <p> Id  :  <span class="details" id="employeeId"><span></p>
+    <p> Name  :  <span class="details"><span></p>
+    <p> Email  :  <span class="details"><span></p>
+        <p> Contact  :  <span class="details"><span></p>
+    <p> Desidnation  :  <span class="details"><span></p>
+   
+    <p> Salary  :  <span class="details"><span></p>
+    <p> DOJ  :  <span class="details"><span></p>
+    <p> Gender  :  <span class="details"><span></p>
+        <p><img src="" alt="" id="img" id="image" ></p>
+        <script>
+            let details= new URLSearchParams(location.search)
+            let id=details.get('id');
+            let name=details.get('name');
+            let email=details.get('email');
+            let contact=details.get('contact')
+            let designation=details.get('designation');
+            let salary=details.get('salary');
+            let doj=details.get('doj');
+            let gender=details.get('gender');
+
+
+
+            
+            let imagePath=details.get('imagePath/images/DSC_0314-01.jpg')
+           
+            console.log(contact);
+
+
+//  let employeeId=document.getElementById('employeeId')
+// employeeId.innerText=id;
+// console.log(employeeId.innerText);
+
+
+
+           let setData=document.getElementsByClassName('details')
+           setData[0].innerHTML=id;
+           setData[1].innerHTML=name;
+           setData[2].innerHTML=email;
+           setData[3].innerHTML=contact;
+           
+           setData[4].innerHTML=designation;
+           setData[5].innerHTML=salary;
+           setData[6].innerHTML=doj;
+           setData[7].innerHTML=gender;
+
+
+
+
+          
+           let imageP=document.getElementById('image')
+           imageP.src='imagePath/'
+           
+//images/${imagePath}
+        
+
+
+
+
+         
+
+            
+        </script>
+    
+</body>
+</html

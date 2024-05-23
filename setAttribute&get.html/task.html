@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid;
+
+            width: 500px;
+            height: 500px;
+            margin: 20px auto;
+
+        }
+
+        .container2 {
+            border: 2px solid;
+            width: 500px;
+            height: 150px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .box1 {
+            border: 2px solid black;
+            width: 150px;
+            height: 130px;
+            /* background: url(/assets/images/fan.png); */
+            background-size: contain;
+
+        }
+
+        .box2 {
+            border: 2px solid black;
+            width: 150px;
+            height: 130px;
+
+
+        }
+
+        .box3 {
+            border: 2px solid black;
+            width: 150px;
+            height: 130px;
+        }
+
+        img {
+            width: 140px;
+            height: 130px;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       <img src="" alt="" id="image"></div>
+    <div class="container2">
+
+        <div class="box1">
+            <img src="/assets/images/fan.png" alt="" id="image1" onclick="fun1(src)">
+        </div>
+        <div class="box2">
+            <img src="/assets/images/mouse.jpg" alt="" id="image2" onclick="fun2(src)">
+        </div>
+        <div class="box3">
+            <img src="/assets/images/pc.jpg" alt="" id="image3" onclick="fun3(src)" >
+        </div>
+    </div>
+    <script>
+     function fun1(source){
+
+        const container = document.getElementById('image')
+        const image1 = document.getElementById('image1')
+        let image=image1.getAttribute('src',`${source}`)
+        container.setAttribute("src",`${image}`)
+
+        
+
+        // const image2 = document.getElementById('image2')
+        // console.log(image2);
+        // const image3 = document.getElementById('image3')
+        // console.log(image3);
+     
+        // container.setAttribute("src","/assets/images/fan.png");
+     }
+     function fun2(source){
+        const container = document.getElementById('image')
+        const image2 = document.getElementById('image2')
+        let image = image2.getAttribute('src',`${source}`)
+        container.setAttribute("src",`${image}`)
+
+     }
+     function fun3(source){
+        const container = document.getElementById('image')
+        const image3 = document.getElementById('image3')
+        let image = image3.getAttribute('src',`${source}`)
+        container.setAttribute("src",`${image}`)
+
+     }
+
+
+    </script>
+</body>
+
+</html>

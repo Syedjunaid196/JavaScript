@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Set Attribute And Get Attribute</h1>
+    <div class="container">
+        <input type="text" name="name" id="textBox">
+        <button onclick="fun()">Please Hit Me</button>
+        <input type="checkbox" name="" id="chkbox" onchange="fun()">
+    </div>
+    <script>
+        function fun()
+        {
+         const textBox = document.getElementById('textBox')
+         console.log(textBox);
+         textBox.setAttribute("type","password");
+         value =textBox.getAttribute('type');
+         console.log(value);
+        }
+    </script>
+</body>
+</html>
