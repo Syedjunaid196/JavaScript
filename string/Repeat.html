@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repeat</title>
+</head>
+
+<body>
+    <div id="heading1">I Am Good Because I live With Good people</div>
+    <button onclick="fun()">Hit Me To repeat</button>
+    <div id="heading2"></div>
+
+    <script>
+        function fun() {
+            let heading1 = document.getElementById('heading1');
+            let heading1Value = heading1.innerHTML;
+            console.log(heading1Value);
+
+            let res = heading1Value.repeat(10);
+            console.log(res);
+
+            let heading2 = document.getElementById('heading2');
+            let heading2Value = heading2.innerHTML;
+
+            heading2.innerHTML = res;
+
+        }
+    </script>
+
+</body>
+
+</html>

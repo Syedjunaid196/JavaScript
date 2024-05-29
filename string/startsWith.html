@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>statrs With</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading1">string Starts With</h1>
+    </div>
+   <script>
+    let string = "Logic Hub software Solutions"
+    let isValid = string.startsWith('logic')
+    console.log(isValid);
+    // it is showing me false because first letter of the word "logic" is in lowerCase..
+    // so in order to get rid of case sensitivity we just convert the whole string into the upperCase form..
+
+    let isvalid1 = string.toLowerCase().startsWith('logic');
+    console.log(isvalid1);
+    // And guess what it is true the case sensitivity is gone...
+    let heading1=document.getElementById("heading1");
+    heading1.innerHTML = isvalid1;
+   </script> 
+</body>
+</html>

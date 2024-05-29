@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ends With</title>
+</head>
+
+<body>
+    <div class="continer1">
+        <h1 id="heading1"></h1>
+    </div>
+    <script>
+        let string = "Logic Hub Software solutions"
+
+        let isValid= string.toLowerCase().endsWith('solutions');
+        console.log(isValid);
+        let heading1 = document.getElementById('heading1');
+        let res = heading1.innerHTML = isValid
+    </script>
+</body>
+
+</html>

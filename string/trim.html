@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trim start and trim end</title>
+</head>
+
+<body>
+    <input type="text" name="" id="email">
+    <button onclick="fun()">Hit Me </button>
+
+   <h2 id="heading1"></h2>
+   <h2 id="heading2"></h2>
+    <script>
+        function fun() {
+            let email = document.getElementById('email');
+            let emailValue = email.value;
+            console.log(emailValue);
+           let res = emailValue.trim();
+           // we can use trimStart() and trimEnd() as well;
+           console.log(res);
+
+
+            let heading1 = document.getElementById('heading1');
+            let heading2 = document.getElementById('heading2');
+
+            heading1.innerHTML = `normal value entered by user is -${emailValue}`;
+            heading2.innerHTML = `trimmed value is - ${res}`
+            
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainContainer {
+            text-transform: capitalize;
+            text-align: center;
+            margin: 375px;
+            margin-top: 27px;
+            border: 3px solid;
+            width: 700px;
+            height: 600px;
+            border-radius: 20px;
+            background-color: rgb(206, 194, 251);
+        }
+
+        .container input {
+            margin-top: 140px;
+        }
+
+        body div,
+        h2 {
+            margin-top: 30px;
+             color: red; 
+        }
+
+        input {
+            width: 400px;
+            height: 30px;
+            border: 4px solid;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        ::placeholder {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .container1 button {
+            width: 150px;
+            height: 30px;
+            border: 3px solid;
+            border-radius: 20px;
+
+        }
+
+
+        button:hover {
+            color: red;
+        }
+
+        input:hover {
+            color: red;
+        }
+        h2:hover {
+            color: yellow;
+        }
+        .mainContainer:hover {
+            color: orange;
+            background-color: rgb(215, 208, 208);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+
+
+        <div class="container">
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" value="">
+
+        </div>
+
+        <div class="container1">
+            <button onclick="fun()">Get Email Part </button>
+            <button onclick="fun1()">Get domain Name</button>
+            <button onclick="fun2()">Get Top Level Domain</button>
+        </div>
+
+        <div class="container3">
+            <h2 id="heading1">Email Part</h2>
+            <h2 id="heading2">Domain Name</h2>
+            <h2 id="heading3">Top Level Domain</h2>
+        </div>
+
+    </div>
+
+    <script>
+        function fun() {
+
+
+            let email = document.getElementById('email')
+            let emailValue = email.value;
+
+            console.log(emailValue);
+
+            let heading1 = document.getElementById('heading1')
+            console.log(heading1)
+
+
+            let indexOf = emailValue.indexOf('@');  //15//
+
+            console.log(indexOf);
+
+            let emailPart = emailValue.substring(0, indexOf);
+
+            heading1.innerHTML = ` email part is - "${emailPart}"`;
+        }
+
+        function fun1() {
+
+            let email = document.getElementById('email')
+            let emailValue = email.value;
+            console.log(emailValue);
+
+            let indexOf = emailValue.indexOf('@') +1;
+            let lastIndexOf = emailValue.lastIndexOf(".");
+            console.log(lastIndexOf);
+
+            let domainpart = emailValue.substring(indexOf, lastIndexOf);
+
+            heading2.innerHTML = ` Domain Part is - "${domainpart}"`;
+
+        }
+
+        function fun2() {
+
+            let email = document.getElementById('email');
+            let emailValue = email.value;
+            console.log(email, emailValue);
+
+            let indexOf = emailValue.lastIndexOf(".")+1;
+
+            let TopLevelDomain = emailValue.substring(indexOf)
+
+            let res = heading3.innerHTML = `Top Level Domain is - "${TopLevelDomain}"`;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

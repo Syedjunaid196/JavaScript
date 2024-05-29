@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concat</title>
+</head>
+
+<body>
+    <div id="heading1">Hello, </div>
+    <div id="heading2"> Guess Where Is Me?</div>
+    <button onclick="fun()">Hit Me To Concat</button>
+    <div id="heading3"></div>
+
+    <script>
+        function fun() {
+            let heading1 = document.getElementById('heading1');
+            let heading1Value = heading1.innerHTML;
+            console.log(heading1Value);
+
+            let heading2 = document.getElementById('heading2');
+            let heading2Value = heading2.innerHTML;
+            console.log(heading2Value);
+
+            let res = heading1Value.concat(heading2Value);
+
+            let heading3 = document.getElementById('heading3');
+             heading3.innerHTML = res;
+
+        }
+    </script>
+
+</body>
+
+</html>

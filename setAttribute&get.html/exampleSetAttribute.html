@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Attribute</title>
+    <style>
+        .container {
+            background-color: aqua;
+            width: 500px;
+            height: 500px;
+            margin: 55px auto;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div class="container">
+        <input type="password" name="password" id="password" placeholder="Please Enter Your Password">
+        <button onclick="fun()">Show Password</button>
+        <button onclick="fun1()">click me</button>
+    </div>
+    <script>
+        function fun() {
+            const pass = document.getElementById('password');
+            console.log(pass)
+            pass.setAttribute("type", "text", "background-color","green");
+            let val = pass.getAttribute
+
+        }
+       
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add class via js</title>
+    <style>
+        /* .container {
+            border: 5px solid black;
+            width: 800px;
+            height: 400px;
+            margin: 44px auto;
+        } */
+
+        .container1 {
+            border: 5px solid rgb(187, 22, 22);
+            width: 1000px;
+            height: 800px;
+            margin: 44px auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti impedit, harum quia nihil reiciendis sunt
+            et illum iusto blanditiis velit.</p>
+    </div>
+    <button onclick="fun()">hit me</button>
+
+    <script>
+        function fun() {
+            container = document.getElementsByClassName('container')
+            container.classList.Add('container1')
+        }
+    </script>
+</body>
+
+</html>

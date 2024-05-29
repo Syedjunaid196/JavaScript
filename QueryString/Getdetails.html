@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Details</title>
 </head>
+
 <body>
-    <img src="" id="image" alt="">
-    
+    <div class="container">
+        <h1> id : <span id="spanid"></span> </h1>
+        <h2>name: <span id="spanname"></span></h2>
+        <h2>quantity : <span id="spanquantity"></span></h2>
+        <h2>price : <span id="spanprice"></span></h2>
+        <img src="" alt="" id="image">
+
+    </div>
+
     <script>
-        console.log(location);
+        // console.log(location);
         let params = new URLSearchParams(location.search);
+        console.log(params);
         let id = params.get("id");
         let name = params.get('name');
         let quantity = params.get('quantity');
         let price = params.get('price');
         let image = params.get('image');
-
+        console.log(image);
         let img = document.querySelector("#image");
-        img.src = 'assets/images/${image}'
+        img.src = `/assets/images/${image}`
+
+        let spanid = document.getElementById('spanid')
+        spanid.innerText = id;
+
+        let spanname = document.getElementById('spanname')
+        spanname.innerText = name;
+
+        let spanquantity = document.getElementById('spanquantity')
+        spanquantity.innerText = quantity;
+
+        let spanprice = document.getElementById('spanprice')
+        spanprice.innerText = price;
+
+
+
+
     </script>
 </body>
+
 </html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inculdes</title>
+</head>
+<body>
+    <div>
+        <h1 id="heading1"></h1>
+    </div>
+    <script>
+        let string = "logic hub software solutions "
+        let isvalid  = string.toLocaleLowerCase().includes('software');
+
+        let heading1 = document.getElementById('heading1');
+        let res= heading1.innerHTML = isvalid;
+    </script>
+</body>
+</html>

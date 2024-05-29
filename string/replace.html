@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace</title>
+</head>
+
+<body>
+    <h1 id="heading1">replaced value is </h1>
+    <h1 id="heading2">global replaced value is </h1>
+    <h1 id="heading3">global with case insensitve replaced value is </h1>
+    <script>
+        let string = "i am good and i live with Good people and they also live with the good people";
+
+
+
+        let res = string.replace('good', 'bad');
+        let heading1 = document.getElementById('heading1');
+        heading1.innerHTML = res;
+        //this only changes first word and is case sensitive;
+
+
+
+        let res1 = string.replace(/good/g, 'bad');
+        let heading2 = document.getElementById('heading2');
+        heading2.innerHTML = res1;  //this changes all words but is case sensitive
+
+
+        let res2 = string.replace(/good/gi, 'bad');
+        console.log(res2);
+        let heading3 = document.getElementById('heading3');
+        heading3.innerHTML = res2;
+        //replaces all the words and is case insensitive
+
+
+    </script>
+</body>
+
+</html>
