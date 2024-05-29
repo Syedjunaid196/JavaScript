@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>split</title>
+</head>
+
+<body>
+    <div id="heading1">
+        apple, banana, tomato, onion, grapes, carrot
+    </div>
+    <div id="heading2"></div>
+    <script>
+        let heading1= document.getElementById('heading1');
+        let heading1Value = heading1.innerHTML;
+        let arr = heading1Value.split(',');
+
+
+        let heading2 = document.getElementById('heading2');
+        heading2.innerHTML= arr;
+
+        console.log(arr);
+
+    </script>
+</body>
+
+
+</html>
