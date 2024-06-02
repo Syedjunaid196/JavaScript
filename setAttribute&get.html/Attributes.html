@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Set Attribute And Get Attribute</h1>
     <div class="container">
         <input type="text" name="name" id="textBox">
         <button onclick="fun()">Please Hit Me</button>
-        <input type="checkbox" name="" id="chkbox" onchange="fun()">
+        <input type="checkbox" name="" id="chkbox" onchange="fun1()"><label for="checkbox">Show password</label>
+    </div>
+
+    <div>
+        <h2 id="heading1">get attribute</h2>
+
     </div>
     <script>
-        function fun()
-        {
-         const textBox = document.getElementById('textBox')
-         console.log(textBox);
-         textBox.setAttribute("type","password");
-         value =textBox.getAttribute('type');
-         console.log(value);()
+        function fun() {
+            const textBox = document.getElementById('textBox')
+            console.log(textBox);
+            textBox.setAttribute("type", "password");
+            value = textBox.getAttribute('type');
+            console.log(value);
+
+            let heading1 = document.getElementById('heading1');
+            heading1.innerHTML = `attribute type is ${value} `
+        }
+
+        function fun1() {
+            let textbox = document.getElementById('textBox');
+            textBox.setAttribute("type", "text");
+
+            let value = textbox.getAttribute("type")
+
+            heading1.innerHTML = `get attribute type is ${value}`;
+
         }
     </script>
 </body>
+
 </html>

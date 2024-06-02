@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splice (add any where)</title>
+</head>
+
+<body>
+    <input type="number" name="" id="number">
+    <div>
+        <button onclick="spliceAdd()">splice-add</button>
+        <button onclick="spliceRemove()">splice-remove</button>
+        <button onclick="spliceRemoveAndAdd()">splice-remove-add</button>
+    </div>
+
+    <script>
+        let arr = [40, 30, 33, 22, 11, 333, 223, 432, 5544, 5454, 5687, 998, 908];
+
+        function spliceAdd() {
+           
+            arr.splice(3,0,300,30000,500000);
+            console.log(arr);
+
+        }
+
+        function spliceRemove()
+        {
+            arr.splice(0,3)
+            console.log(arr);
+        }
+
+        function spliceRemoveAndAdd()
+        {
+            arr.splice(3,3,2121,321,424)
+            console.log(arr);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add item</title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" name="" id="textNumber">
+        <div>
+            <button onclick="addItems()">add item</button>
+        </div>
+        <div>
+            <button onclick="showItems()">show array</button>
+        </div>
+    </div>
+    <script>
+        let arr = []
+
+        function addItems() {
+            let num = document.getElementById('textNumber').value;
+            console.log(num);
+
+            arr.push(num);
+
+
+        }
+
+        function showItems() {
+            console.log(arr);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

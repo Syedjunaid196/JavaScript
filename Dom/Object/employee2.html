@@ -15,7 +15,8 @@
             padding: 50px;
             justify-content: end;
         }
-        div{
+
+        div {
             margin-top: 10px;
         }
 
@@ -66,28 +67,35 @@
             </div>
             <div>
                 <label for="totalIncome">Total Income</label>
-                <input type="number" name="" id="totalIncome" disabled>
+                <input type="text" name="" id="totalIncome" disabled>
             </div>
             <div>
-                <button type="button">please click me</button>
+                <button type="button" onclick="income()">please click me</button>
             </div>
         </form>
 
     </div>
     <script>
-        let salary = document.getElementById('salary')
-        let rentalIncome = document.getElementById('rentalIncome');
-        let otherIncome = document.getElementById('otherIncome');
+        function income() {
 
-        let valueOfSalary = salary.value;
-        let valueOfRentalIncome = rentalIncome.value;
-        let valueOfOtherIncome = otherIncome.value;
-        let totalWelth = Number(valueOfSalary) + Number(valueOfRentalIncome) + Number(valueOfOtherIncome)
+            let salary = document.getElementById('salary');
+            let rentalIncome = document.getElementById('rentalIncome');
+            let otherIncome = document.getElementById('otherIncome');
+            let totalIncome = document.getElementById('totalIncome');
 
-        let totalIncome = document.getElementById('totalIncome');
-        totalIncome.value = totalWelth;
-        console.log(totalWelth)
+            let valueOfSalary = salary.value;
+            console.log(valueOfSalary);
 
+            let valueOfRentalIncome = rentalIncome.value;
+            console.log(valueOfRentalIncome);
+
+            let valueOfOtherIncome = otherIncome.value;;
+            console.log(valueOfOtherIncome);
+
+            let totalWelth = Number(valueOfSalary) + Number(valueOfRentalIncome) + Number(valueOfOtherIncome)
+            totalIncome.value = `The Total Wealth Is ${totalWelth}`;
+            console.log(totalWelth);
+        }
     </script>
 </body>
 

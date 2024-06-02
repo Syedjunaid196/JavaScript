@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add item at beginning</title>
+</head>
+
+<body>
+    <input type="number" name="" id="number">
+
+
+    <div>
+        <button onclick="unshift()">Unshift</button>
+    </div>
+    <div>
+        <button onclick="show()">show</button>
+    </div>
+
+    <script>
+        let arr = [10, 20, 30, 40, 50, 60];
+
+        function unshift() {
+
+            num = document.getElementById('number').value;
+            arr.unshift(num);
+
+            console.log(arr);
+        }
+
+        function show()
+        {
+            console.log(arr);
+        }
+    </script>
+</body>
+
+</html>
