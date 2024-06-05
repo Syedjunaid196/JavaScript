@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorting</title>
+</head>
+<body>
+    <script>
+        let arr = ['junaid', "sahir", 'tashif', 'farman', 'waseem', {name:"junaid"} , true, false]
+       let newarr = arr.slice(2,5)
+        console.log(newarr);
+
+        let newarr2= arr.slice(2, arr.indexOf("waseem"))
+        console.log(newarr2);
+        //slice is a accessor
+
+        // sorting
+        let arr1 = ['z', 'e', 'f', 'x','t','u', 's', 'a', 'g', 'j', 'h', 'a', 'b','y']
+        let newarr1 = arr1.sort();
+        console.log(newarr1);
+
+
+        let students = ['sahir', 'aarif', 'wakar', 'sahil', 'farman', 'aaqib', 'tanveer', 'jubbar', 'ashraf', 'qayoom', 'faizan', 'bassit', 'cathrine', 'danish', 'ehsan']
+        let studentsSorting = students.sort()
+        console.log(studentsSorting);
+
+
+
+    </script>
+</body>
+</html>

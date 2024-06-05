@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        .container {
+            margin: auto;
+            border: 3px solid black;
+            width: 700px;
+            text-align: center;
+            padding: 40px;
+        }
+
+        table th,
+        td {
+            border: 2px solid black;
+            height: 20px;
+        }
+
+        .container table {
+            border: 3px solid black;
+            padding: 30px;
+            margin: auto;
+            width: 700px;
+            border-radius: 15px;
+        }
+
+        .container form input {
+            width: 500px;
+            height: 50px;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 22px;
+            text-transform: uppercase;
+        }
+
+        .container button {
+            width: 250px;
+            height: 30px;
+            margin-top: 15px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+
+            <input type="number" name="" id="id" placeholder="Enter Your Id" class="userInput">
+
+            <input type="text" name="" id="name" placeholder="Enter Your Name" class="userInput">
+
+            <input type="number" name="" id="salary" placeholder="Please Enter Your Salary" class="userInput">
+
+
+            <div>
+                <button type="button" onclick="push()">push</button>
+            </div>
+
+            <div>
+                <button type="button" onclick="pop()">pop</button>
+            </div>
+            <div>
+                <button type="button" onclick="shift()">shift</button>
+            </div>
+
+            <div>
+                <button type="button" onclick="unshift()">unshift</button>
+            </div>
+            <div>
+                <button type="button" onclick="show()">show</button>
+            </div>
+
+
+        </form>
+    </div>
+
+    <div class="container">
+        <table>
+            <caption>Employee Details</caption>
+
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>salary</th>
+                </tr>
+            </thead>
+
+            <tbody id="employeeTable">
+                <!-- Initial empty rows -->
+                <tr>
+                    <!-- <td class="data"></td>
+                    <td class="data"></td>
+                    <td class="data"></td> -->
+                </tr>
+                <tr>
+                    <!-- <td class="data"></td>
+                    <td class="data"></td>
+                    <td class="data"></td> -->
+                </tr>
+                <tr>
+                    <!-- <td class="data"></td>
+                    <td class="data"></td>
+                    <td class="data"></td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function getInputValues() {
+            const id = document.getElementById('id').value;
+            const name = document.getElementById('name').value;
+            const salary = document.getElementById('salary').value;
+            return { id, name, salary };
+        }
+
+        function push() {
+            const { id, name, salary } = getInputValues();
+            const table = document.getElementById('employeeTable');
+            const newRow = table.insertRow();
+            newRow.innerHTML = `<td>${id}</td><td>${name}</td><td>${salary}</td>`;
+        }
+
+        function pop() {
+            const table = document.getElementById('employeeTable');
+            if (table.rows.length > 0) {
+                table.deleteRow(table.rows.length - 1);
+            }
+        }
+
+        function shift() {
+            const table = document.getElementById('employeeTable');
+            if (table.rows.length > 0) {
+                table.deleteRow(0);
+            }
+        }
+
+        function unshift() {
+            const { id, name, salary } = getInputValues();
+            const table = document.getElementById('employeeTable');
+            const newRow = table.insertRow(0);
+            newRow.innerHTML = `<td>${id}</td><td>${name}</td><td>${salary}</td>`;
+        }
+
+        function show() {
+            // This function can be used to show some predefined data for testing.
+            const data = [
+                { id: 1, name: "John Doe", salary: 50000 },
+                { id: 2, name: "Jane Smith", salary: 60000 },
+                { id: 3, name: "Peter Johnson", salary: 70000 },
+            ];
+
+            const table = document.getElementById('employeeTable');
+            table.innerHTML = ''; // Clear the table
+            data.forEach(item => {
+                const newRow = table.insertRow();
+                newRow.innerHTML = `<td>${item.id}</td><td>${item.name}</td><td>${item.salary}</td>`;
+            });
+        }
+    </script>
+</body>
+
+</html>
