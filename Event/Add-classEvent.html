@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            background-color: aqua;
+            width: 10rem;
+            height: 10rem;
+
+        }
+
+        .onMouseEnter {
+            background-color: green;
+            border-radius: 100px 100px 100px 100px;
+            height: 15rem;
+            transition: all 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">Click Me</button>
+
+
+    <div class="mydiv">
+
+    </div>
+
+
+
+    <script>
+        btn = document.querySelector('#btn');
+        mydiv = document.querySelector('.mydiv');
+
+
+        mydiv.onmouseenter = () => {
+            mydiv.classList.toggle('onMouseEnter')
+            console.log(event.target)
+        }
+
+
+        mydiv.onmouseout = (even) => {
+            mydiv.classList.remove('onMouseEnter')
+        }
+
+        btn.onclick = function (event) {
+            mydiv.classList.toggle('onMouseEnter');
+
+            console.log(event.target);
+
+        }
+
+        btn.ondblclick = function (event) {
+            mydiv.classList.remove('onMouseEnter')
+        }
+    </script>
+</body>
+
+</html>
