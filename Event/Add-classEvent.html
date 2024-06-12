@@ -39,7 +39,7 @@
 
 
         mydiv.onmouseenter = () => {
-            mydiv.classList.toggle('onMouseEnter')
+            mydiv.classList.add('onMouseEnter')
             console.log(event.target)
         }
 
@@ -56,7 +56,7 @@
         }
 
         btn.ondblclick = function (event) {
-            mydiv.classList.remove('onMouseEnter')
+            // mydiv.classList.remove('onMouseEnter')
         }
     </script>
 </body>

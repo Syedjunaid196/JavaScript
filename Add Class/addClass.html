@@ -6,18 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add class via js</title>
     <style>
-        /* .container {
-            border: 5px solid black;
-            width: 800px;
-            height: 400px;
-            margin: 44px auto;
-        } */
-
-        .container1 {
+        .class {
             border: 5px solid rgb(187, 22, 22);
-            width: 1000px;
-            height: 800px;
-            margin: 44px auto;
+            border-radius: 10px;
+            width: 100px;
+            padding: 20px;
+            height: auto;
+            margin: 10px auto;
+            transition: all 2s;
+        }
+
+        .class1 {
+            border: 5px solid green;
+            border-radius: 10px;
+            width: 100px;
+
+            margin: 10px auto;
+            transition: all 2s;
+
         }
     </style>
 
@@ -27,15 +33,38 @@
     <div class="container">
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti impedit, harum quia nihil reiciendis sunt
-            et illum iusto blanditiis velit.</p>
+            et illum iusto blanditiis velit.
+        </p>
     </div>
+
+
     <button onclick="fun()">hit me</button>
+    <button ondblclick="fun1()">hit me twice</button>
 
     <script>
+
+        container = document.querySelector('.container');
         function fun() {
-            container = document.getElementsByClassName('container')
-            container.classList.Add('container1')
+            console.log(container);
+            container.className = 'class'
+            // container.className = 'class1'
+
+            // in this type we have a disadvantage which is it overwrites the previous class, and we can't use the toggle property here//
+
         }
+
+
+
+        // we can add the class via classList property which has many advantages over className
+
+        function fun1() {
+            container.classList.add('class1')
+        }
+
+
+
+
+
     </script>
 </body>
 
