@@ -38,9 +38,10 @@
         mydiv = document.querySelector('.mydiv');
 
 
-        mydiv.onmouseenter = () => {
+        mydiv.onmouseenter = (event) => {
             mydiv.classList.add('onMouseEnter')
-            console.log(event.target)
+            console.log(event.clientX)
+            console.log(event.clientY)
         }
 
 

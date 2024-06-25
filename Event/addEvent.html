@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ways to add an event</title>
+
+    <style>
+        * {
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="userName" placeholder="Enter Your Username">
+
+    <h1 id="heading1">hello there</h1>
+
+
+    <script>
+        username = document.querySelector('#userName');
+        heading = document.querySelector('#heading1');
+        console.log(username);
+        console.log(heading)
+
+
+        username.onkeyup = function (event) {
+
+            if (event.keyCode === 13 || event.keyCode === 9 || event.keyCode === 32) {
+
+                // heading.innerHTML = username.value; 
+
+                // heading.innerHTML = this.value;
+
+                heading.innerHTML = event.target.value;
+
+                // console.log(event)       
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>

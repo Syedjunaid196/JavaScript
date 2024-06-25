@@ -15,18 +15,14 @@
 
     <script>
         function fun() {
-            let heading1 = document.getElementById('heading1');
-            let heading1Value = heading1.innerHTML;
-            console.log(heading1Value);
+            let firstHeading = document.getElementById('heading1').innerHTML;
+            let secondHeading = document.getElementById('heading2').innerHTML;
 
-            let heading2 = document.getElementById('heading2');
-            let heading2Value = heading2.innerHTML;
-            console.log(heading2Value);
 
-            let res = heading1Value.concat(heading2Value);
+            let concat = firstHeading.concat(secondHeading);
 
             let heading3 = document.getElementById('heading3');
-             heading3.innerHTML = res;
+            heading3.innerHTML = concat;
 
         }
     </script>
