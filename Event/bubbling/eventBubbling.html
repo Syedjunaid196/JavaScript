@@ -18,11 +18,11 @@
   </ol>
 
   <script>
-    let ul = document.getElementById('countries');
+    let countries = document.getElementById('countries');
     
     document.querySelector('#btn').addEventListener('click', function () {
       let country = prompt('enter country name');
-      ul.innerHTML += `<li>${country}</li>`
+      countries.innerHTML += `<li>${country}</li>`
     });
 
     document.querySelector('#countries').addEventListener('click', function (event) {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubbling</title>
+    <style>
+        div {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 20px;
+        }
+
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="forebearear">
+        <p>forebearear</p>
+        <div id="grandParent">
+            <p>grand parent</p>
+            <div id="parent">
+                <p>parent</p>
+                <button id="targetChild">Hit Me</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('click', function () {
+            console.log('window');
+        }, false);
+
+        document.addEventListener('click', function () {
+            console.log('this is document')
+        }, false);
+
+        document.body.addEventListener('click', function () {
+            console.log('this is body')
+        }, false);
+
+        document.querySelector('#forebearear').addEventListener('click', function () {
+            console.log('this is forebearear')
+            this.style.backgroundColor = 'green'
+        }, false);
+
+        document.querySelector('#grandParent').addEventListener('click', function () {
+            console.log('thsi is grand parent');
+            this.style.backgroundColor = 'olive'
+
+        }, false);
+
+        document.querySelector('#parent').addEventListener('click', function () {
+            // console.log('this is parent', event.target)
+            this.style.backgroundColor = 'blue'
+
+        }, false);
+
+        document.querySelector('#targetChild').addEventListener('click', function () {
+            // console.log("this is button", event.target);
+            this.style.backgroundColor = "silver"
+        }, false);
+
+    </script>
+</body>
+
+</html>
