@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <form class="m-2" name="myForm" action="" id="myForm">
+
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" placeholder="Name" type="text" name="name" id="name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" placeholder="Email" type="text" name="email" id="email">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender" class="form-control">
+                <option value="">Select Gender</option>
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="contactNo">Contact No</label>
+            <input class="form-control" placeholder="Contact No" type="text" name="contactNo" id="contactNo">
+        </div>
+        <!-- 
+
+                    <div class="form-group">
+                              <label for="userName">User Name</label>
+                              <input class="form-control" placeholder="Username" type="text" name="userName"
+                                        id="userName">
+                    </div>
+
+                    <div class="form-group">
+                              <label for="password">Password </label>
+                              <input class="form-control" placeholder="password" type="password" name="password"
+                                        id="password">
+                    </div>
+
+                    <div class="form-group">
+                              <label for="confirmPassword">Confirm Password </label>
+                              <input class="form-control" placeholder="password" type="password" name="confirmPassword"
+                                        id="confirmPassword">
+                    </div> -->
+
+        <button class="btn btn-primary m-5" type="submit">Submit</button>
+    </form>
+
+
+
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Contact No</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>zdfszdf</td>
+                <td>Emszdfsdfail</td>
+                <td>Contact No</td>
+                <td><button>More</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+
+        // let form1 = document.forms['form1'];
+        // console.log(form1);
+        // const form2 = document.forms['form2'];
+        // console.log(form2);
+
+
+        document.querySelector('#myForm')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+                // let name = document.querySelector('#name').value;
+                // const name = this['name'].value;
+                // const email = this['email'].value;
+                // const contactNo = this['contactNo'].value;
+                // const gender = this['gender'].value;
+                // const userName = this['userName'].value;
+                // const password = this['password'].value;
+                // const confirmPassword = this['confirmPassword'].value;
+
+                // const user = {
+                //           name: this['name'].value,
+                //           email: this['email'].value,
+                //           contactNo: this['contactNo'].value,
+                //           gender: this['gender'].value,
+                //           userName: this['userName'].value,
+                //           password: this['password'].value,
+                //           confirmPassword: this['confirmPassword'].value
+
+                // }
+
+                // console.log(user);
+                const arr1 = [
+                    ['name', 'basit'],
+                    ['email', 'basit@logichubss.com'],
+                    ['contactNo', '94190011322'],
+                    ['gender', 'm'],
+                ]
+                const fd = new FormData(this);
+                for (const arr of fd) {
+                    console.log(arr)
+                    console.log(`name : ${arr[0]} => Value : ${arr[1]}`);
+                }
+
+            })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+
+    <style>
+        table {
+            border: 2px solid black;
+            height: 250px;
+            width: 300px;
+            margin: auto;
+        }
+
+        th,td{
+            border: 1px solid black;
+            padding: 5px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr id="tableData">
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+         let params = new URLSearchParams(location.search);
+         console.log(params);
+
+         let name = params.get('name');
+         console.log(name)
+
+         let email = params.get('email');
+         console.log(email);
+
+         let address = params.get('address');
+         console.log(address);
+
+         
+    </script>
+</body>
+
+</html>

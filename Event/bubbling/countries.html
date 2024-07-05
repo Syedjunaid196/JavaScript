@@ -12,13 +12,13 @@
 
   <button id="btn">add Country</button>
   <ol id="countries">
-    <li>india</li>
+    <li>span</li>
     <li>nepal</li>
     <li>china</li>
   </ol>
 
   <script>
-    let countries = document.getElementById('countries');
+    // let countries = document.getElementById('countries');
     
     document.querySelector('#btn').addEventListener('click', function () {
       let country = prompt('enter country name');
@@ -26,7 +26,10 @@
     });
 
     document.querySelector('#countries').addEventListener('click', function (event) {
-      event.target.style.display = 'none'
+      console.log(event);
+      if(event.target.tagName === 'LI'){
+        event.target.remove()
+      }
     });
   </script>
 </body>

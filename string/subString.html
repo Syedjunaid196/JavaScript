@@ -136,8 +136,11 @@
             console.log(email, emailValue);
 
             let indexOf = emailValue.lastIndexOf(".")+1;
+            console.log(indexOf);
 
             let TopLevelDomain = emailValue.substring(indexOf)
+
+            console.log(TopLevelDomain);
 
             let res = heading3.innerHTML = `Top Level Domain is - "${TopLevelDomain}"`;
         }
