@@ -24,23 +24,31 @@
             let userInput = document.querySelector('#userInput').value;
             let resultHeading = document.querySelector('#resultHeading')
 
-            if (userInput <= 0) {
-                resultHeading.innerHTML = 'Enter value greater than zero'
-                return;
-            }
-
-
-          let  intervalId =  setInterval(() => {
-
-                resultHeading.innerHTML = userInput;
-                userInput--;
-
-                if(userInput < 0){
-                    clearInterval(intervalId)
-                    resultHeading.innerHTML = 'countdown finished';
-                }
+            setTimeout(() => {
                 
-            }, 1000)
+                if (userInput <= 0) {
+                    resultHeading.innerHTML = 'Enter value greater than zero'
+                    return;
+                }
+    
+
+                resultHeading.innerHTML = 'starting'
+    
+              let  intervalId =  setInterval(() => {
+    
+                    resultHeading.innerHTML = userInput;
+                    userInput--;
+    
+                    if(userInput < 0){
+                        clearInterval(intervalId)
+                        resultHeading.innerHTML = 'countdown finished';
+                    }
+                    
+                }, 1000)
+            }, 1500);
+
+
+
 
         })
     </script>
