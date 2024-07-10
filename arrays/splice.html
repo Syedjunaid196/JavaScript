@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <input type="number" name="" id="number">
+  
     <div>
         <button onclick="spliceAdd()">splice-add</button>
         <button onclick="spliceRemove()">splice-remove</button>
@@ -16,24 +16,24 @@
     </div>
 
     <script>
-        let arr = [40, 30, 33, 22, 11, 333, 223, 432, 5544, 5454, 5687, 998, 908];
+        let arr = [10, 20, 30, 40, 50, 60, 70,];
 
         function spliceAdd() {
            
-            arr.splice(3,0,300,30000,500000);
+            arr.splice(3,0,41,42,43);
             console.log(arr);
 
         }
 
         function spliceRemove()
         {
-            arr.splice(0,3)
+            arr.splice(6,1)
             console.log(arr);
         }
 
         function spliceRemoveAndAdd()
         {
-            arr.splice(3,3,2121,321,424)
+            arr.splice(4,1,50, 51, 52,)
             console.log(arr);
         }
     </script>

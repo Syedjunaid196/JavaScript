@@ -1,0 +1,27 @@
+[
+    {
+        "id": 101,
+        "name": "junaid",
+        "salary": 54332,
+        "isActive": true
+    },
+    {
+        "id": 102,
+        "name": "aarif",
+        "salary": 52525,
+        "isActive": true
+    },
+    {
+        "id": 103,
+        "name": "sahil",
+        "salary": 5458484564,
+        "isActive": true
+    },
+    {
+        "id": 104,
+        "name": "sahir",
+        "salary": 55332,
+        "isActive": true
+    }
+
+]

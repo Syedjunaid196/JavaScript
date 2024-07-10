@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="text" id="user">
+    <button id="btn">click</button>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>name</td>
+                <td>salary</td>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+
+    <h1 id="h1"></h1>
+
+    <script>
+        document.querySelector('#btn').addEventListener('click', function () {
+            let employees = [
+                {
+                    id: 101,
+                    name: "junaid",
+                    salary: 2000
+                },
+                {
+                    id: 102,
+                    name: 'aarif',
+                    salary: 3000
+                },
+                {
+                    id: 103,
+                    name: 'manan',
+                    salary: 3000
+                },
+                {
+                    id: 104,
+                    name: 'farman',
+                    salary: 3000
+                }
+            ]
+            let div = document.querySelector('#tbody')
+
+            function getData() {
+
+                return new Promise((success, reject) => {
+                    let user = document.querySelector('#user').value;
+                    // let num = prompt('enter id')
+                    let find = employees.find((emp) => emp.name == user || emp.id == user)
+                    if (find) {
+                        success(find);
+
+                    }
+                    else {
+                        reject('data not found')
+                    }
+                })
+            }
+            getData()
+
+
+                .then((employee) => {
+
+                    tbody.innerHTML += `  <tr>
+                 <td>${employee.id}</td>
+                 <td>${employee.name}</td>
+                 <td>${employee.salary}</td>
+                 </tr>`
+
+
+                })
+                .catch((err) => {
+                    console.log('data not found');
+                })
+
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>salry</td>
+        </tr>
+        <tbody id="tbody">
+
+        </tbody>
+        <h1 id="h1"></h1>
+
+        <div>
+            <button id="btn">click</button>
+        </div>
+    </table>
+    <script>
+
+        document.querySelector('#btn').addEventListener('click', function (event) {
+
+
+
+
+            let employees = [
+                {
+                    id: 101,
+                    name: "junaid",
+                    salary: 2000
+                },
+                {
+                    id: 102,
+                    name: 'aarif',
+                    salary: 3000
+                },
+                {
+                    id: 103,
+                    name: 'manan',
+                    salary: 3000
+                },
+                {
+                    id: 104,
+                    name: 'farman',
+                    salary: 3000
+                }
+            ]
+
+            let tbody = document.querySelector('#tbody')
+
+            function getData() {
+                return new Promise((success, reject) => {
+                    setTimeout(() => {
+                        if (employees.length > 0) {
+                            success(employees)
+                        }
+                        else {
+                            reject('data not found')
+                        }
+                    }, 1000);
+                })
+            }
+
+            getData()
+                .then((data) => {
+                    employees.map((emp) => {
+                        tbody.innerHTML +=
+                            ` <tr>
+                             <td>${emp.id}</td>
+                             <td>${emp.name}</td>
+                             <td>${emp.salary}</td>
+                             </tr>`
+                    })
+
+                })
+                .catch(() => {
+                    let result = document.querySelector('#h1').innerHTML = 'data not found'
+                })
+        }, false)
+    </script>
+</body>
+
+</html>
